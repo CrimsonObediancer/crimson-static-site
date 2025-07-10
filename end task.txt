@@ -1,0 +1,162 @@
+https://crimsonobediancer.netlify.app/
+
+netstat -ano | findstr :3000
+
+taskkill /PID 6736 /F
+
+http://localhost:3000
+
+#ffcccc
+
+when I open VS code, in the left frame I see, in this order:
+
+OPEN EDITORS
+HEADLESS-WP-Crimson-Vercel-Ready
+.next
+components
+layout.js
+Layout.module.css
+WhisperPopup.module.css
+node modules There are a bunch of them)
+pages\
+_app.js
+about.js
+application.js
+ask.js
+index.js
+WisperPopup.js
+public
+LordObediancer3,webp
+styles
+globals.css
+Home. module.css
+next.config.js
+package-lock.json
+package.json
+OUTLINE
+TIMELINE
+ 
+
+# Re-creating the updated page files after code state reset
+
+pages = {
+    "index.js": """
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import Image from 'next/image';
+
+export default function Home() {
+  return (
+    <Layout>
+      <Head>
+        <title>Enter The Realm Of Obedience</title>
+        <meta name="description" content="The Obediancer awaits not worship, but obedience." />
+      </Head>
+
+      <Image
+        src="/LordObediancer3.webp"
+        alt="The Crimson Obediancer"
+        width={600}
+        height={800}
+        style={{
+          display: 'block',
+          margin: '0 auto',
+          maxWidth: '100%',
+          height: 'auto'
+        }}
+      />
+
+      <h1 style={{ textAlign: 'center', color: '#ffcccc' }}>Enter The Realm Of Obedience</h1>
+      <p style={{ textAlign: 'center' }}>
+        This is not a place for the curious.<br /><br />
+        It is a sanctuary for the surrendered—<br />
+        a sanctum of silence, strength and scarlet surrender.<br /><br />
+        Step forward, if you are called.<br />
+        Kneel, if you are chosen.<br />
+        The Crimson Obediancer awaits not worship, but obedience.
+      </p>
+    </Layout>
+  );
+}
+""",
+    "about.js": """
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import Image from 'next/image';
+
+export default function About() {
+  return (
+    <Layout>
+      <Head>
+        <title>The Origin of Obedience</title>
+        <meta name="description" content="The story behind the Crimson Obediancer." />
+      </Head>
+
+      <Image
+        src="/LordObediancer3.webp"
+        alt="The Crimson Obediancer"
+        width={600}
+        height={800}
+        style={{
+          display: 'block',
+          margin: '0 auto',
+          maxWidth: '100%',
+          height: 'auto'
+        }}
+      />
+
+      <h1 style={{ textAlign: 'center', color: '#ffcccc' }}>The Origin of Obedience</h1>
+      <p style={{ textAlign: 'center' }}>
+        Before the rituals. Before the whispers. Before the obedience—there was only will.
+        The Crimson Obediancer was not born but forged. A reflection of every submissive plea and whispered devotion.
+      </p>
+    </Layout>
+  );
+}
+""",
+    "ask.js": """
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import Image from 'next/image';
+
+export default function Ask() {
+  return (
+    <Layout>
+      <Head>
+        <title>Master, I Beg Of Thee</title>
+        <meta name="description" content="Make your request to the Crimson Obediancer." />
+      </Head>
+
+      <Image
+        src="/LordObediancer3.webp"
+        alt="The Crimson Obediancer"
+        width={600}
+        height={800}
+        style={{
+          display: 'block',
+          margin: '0 auto',
+          maxWidth: '100%',
+          height: 'auto'
+        }}
+      />
+
+      <h1 style={{ textAlign: 'center', color: '#ffcccc' }}>Master, I Beg Of Thee</h1>
+      <p style={{ textAlign: 'center' }}>
+        Submit your deepest desires and requests via this <a href="mailto:lordobediancer@gmail.com?subject=Master%2C%20I%20Beg%20Of%20Thee&body=Describe what you seek from the Crimson Obediancer..." className="navlink" style={{ color: '#ffcccc', textDecoration: 'underline' }}>preformatted email</a>.
+      </p>
+    </Layout>
+  );
+}
+"""
+}
+
+# Save the updated files
+base_path = "/mnt/data/"
+file_paths = []
+for filename, content in pages.items():
+    path = base_path + filename
+    with open(path, "w") as f:
+        f.write(content)
+    file_paths.append(path)
+
+file_paths
