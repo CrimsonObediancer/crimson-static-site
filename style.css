@@ -62,7 +62,7 @@ body {
 }
 
 .email-link {
-  color: #ff9999;
+  color: #990000;
   font-weight: bold;
   text-decoration: none;
 }
@@ -91,4 +91,15 @@ body {
   .content p {
     padding: 0 1rem;
   }
+}
+.site-footer {
+  background-color: #000000;
+  color: ##990000;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #444;
 }
